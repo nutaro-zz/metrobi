@@ -9,7 +9,7 @@ def run() -> None:
     while achilles.position <= tortoise.position:
         achilles.position = tortoise.position
         tortoise.position += 0.5
-        print(f"Achilhes {achilles.position}")
+        print(f"Achilles {achilles.position}")
         print(f"Tortoise {tortoise.position}")
 
 
