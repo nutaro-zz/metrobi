@@ -1,13 +1,13 @@
 class Lexical:
 
     def __init__(self, value: str):
-        self.inputed_value = value
+        self.values = value
         self.open_close = {"{": "}", "[": "]", "(": ")"}
         self.open_buffer = []
         self.close_buffer = []
 
     def _analyze(self):
-        for x in self.inputed_value:
+        for x in self.values:
             if x in self.open_close.keys():
                 self.open_buffer.append(x)
                 continue

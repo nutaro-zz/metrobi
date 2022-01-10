@@ -1,18 +1,11 @@
-class Achilles:
-
-    def __init__(self) -> None:
-        self.position = 0
-
-
-class Tortoise:
-
-    def __init__(self) -> None:
-        self.position = 1
+class Runner:
+    def __init__(self, position: int) -> None:
+        self.position = position
 
 
 def run() -> None:
-    achilles = Achilles()
-    tortoise = Tortoise()
+    achilles = Runner(0)
+    tortoise = Runner(1)
     while achilles.position <= tortoise.position:
         achilles.position = tortoise.position
         tortoise.position += 0.5
