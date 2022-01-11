@@ -1,6 +1,6 @@
-class Runner:
-    def __init__(self, position: int) -> None:
-        self._position = position
+class Achilles:
+    def __init__(self) -> None:
+        self._position = 1
 
     @property
     def position(self) -> float:
@@ -8,13 +8,26 @@ class Runner:
 
     @position.setter
     def position(self, value: int) -> None:
-        self._position = 1 / value
+        self._position += 1 / value
+
+
+class Tortoise:
+    def __init__(self) -> None:
+        self._position = 1.4
+
+    @property
+    def position(self) -> float:
+        return self._position
+
+    @position.setter
+    def position(self, value: float) -> None:
+        self._position += 1 / value
 
 
 def run() -> None:
-    achilles = Runner(1)
-    tortoise = Runner(1)
-    for x in range(1, 50):
+    achilles = Achilles()
+    tortoise = Tortoise()
+    for x in range(1, 100):
         achilles.position = x
         tortoise.position = x
         print(f"Achilles {achilles.position}")
